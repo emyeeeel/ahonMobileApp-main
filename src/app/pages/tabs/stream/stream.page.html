@@ -1,18 +1,4 @@
-<ion-header [translucent]="true" class="custom-header">
-  <ion-toolbar>
-    <div class="header-content">
-      <ion-button class="start-mission-button" (click)="openLiveStream()" fill="solid">
-        <ion-icon slot="start" name="play-outline"></ion-icon>
-        Start Mission
-      </ion-button>
-      <div class="people-count">
-        <ion-icon name="people-outline"></ion-icon>
-        <span>0</span>
-      </div>
-    </div>
-  </ion-toolbar>
-</ion-header>
-
+<app-header></app-header>
 <ion-content [fullscreen]="true">
   <!-- <ion-button 
     expand="block" 
@@ -26,9 +12,11 @@
     Count: {{ count }}
   </ion-item> -->
 
-  <div class="initial-state">
-    <img src="assets/icon/search-icon.png" alt="Search Icon" class="search-icon">
-    <h2 class="scanner-title">Thermal Scanner Ready</h2>
-    <p class="scanner-subtitle">Start mission to begin thermal scanning</p>
+  <div class="container">
+    <div class="initial-state">
+      <img src="assets/icon/search-icon.png" alt="Search Icon" class="search-icon">
+      <h2 class="scanner-title">Thermal Scanner Ready</h2>
+      <p class="scanner-subtitle">Start mission to begin thermal scanning</p>
+    </div>
   </div>
 </ion-content>
