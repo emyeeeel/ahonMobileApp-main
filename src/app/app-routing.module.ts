@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
+import { HeaderComponent } from './components/header/header.component';
+import { StreamPageModule } from './pages/tabs/stream/stream.module';
+
 
 const routes: Routes = [
   {
