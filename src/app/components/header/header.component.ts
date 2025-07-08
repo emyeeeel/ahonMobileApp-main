@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from "@ionic/angular";
+import { MissionTimerService } from 'src/app/services/mission-timer.service';
 
 @Component({
   selector: 'app-header',
@@ -9,17 +10,26 @@ import { IonicModule } from "@ionic/angular";
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  missionStarted = false; 
+  missionStarted = false;
+  formattedTime = '00:00';
 
-  constructor() {}
+  constructor(private missionTimerService: MissionTimerService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.missionTimerService.missionStarted$.subscribe(started => {
+      this.missionStarted = started;
+    });
+
+    this.missionTimerService.formattedTime$.subscribe(time => {
+      this.formattedTime = time;
+    });
+  }
 
   startMission() {
-    this.missionStarted = true;
+    this.missionTimerService.startMission();
   }
 
   endMission() {
-    this.missionStarted = false;
+    this.missionTimerService.stopMission();
   }
 }
