@@ -18,7 +18,7 @@
       align-items: center;
       justify-content: center; /* Horizontally center the content */
       gap: 5%;
-      border: 1px solid white;
+    //   border: 1px solid white;
   
       .start-mission-button {
         --background: #16A34A;
@@ -37,6 +37,7 @@
       .people-count {
         display: flex;
         align-items: center;
+        justify-content: center;
         padding: 6px 12px;
         background-color: #374151;
         border-radius: 8px;
@@ -55,5 +56,37 @@
         }
       }
     }
+  }
+  
+  
+  .initial-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    padding: 16px 25px;
+    text-align: center;
+    border: 1px solid white;
+    width: 80%;
+  }
+  
+  .search-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 16px;
+  }
+  
+  .scanner-title {
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .scanner-subtitle {
+    font-weight: 300;
+    color: white;
+    font-size: 18px;
   }
   
